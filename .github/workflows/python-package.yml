@@ -5,7 +5,7 @@ name: CI
 
 on:
   push:
-    branches: [master, develop]
+    branches: [master, develop, 313-workflow]
   pull_request:
     branches: [master, develop]
 
@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
     strategy:
       matrix:
 
